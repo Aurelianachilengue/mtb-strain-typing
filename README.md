@@ -18,4 +18,29 @@ Distance matrices must be generated externally using PopPUNK, Mash, SKA2, or DNA
 
 ---
 
-## Repository Structure
+## Input Requirements
+
+Distance matrices must be generated externally using the original tools:
+
+PopPUNK
+
+Mash
+
+SKA2
+
+DNAdiff / dnadiff (from MUMmer)
+
+This repository does not run these tools; it only processes their outputs.
+
+---
+## Recommended Use
+
+Clone the repository and run the R scripts within analysis/ to reproduce:
+
+clustering trees
+
+membership ratio plots
+
+genetic distance distribution figures
+
+supplementary visualisations for publications
