@@ -33,18 +33,7 @@ mtb-strain-typing/
 │   │   └── ska2_distances.tsv
 │   └── lineage_assignment/
 │       └── tbprofiler_lineages.tsv
-├── results/
-│   ├── trees/
-│   │   ├── dnadiff_tree.nwk
-│   │   ├── poppunk_tree.nwk
-│   │   ├── mash_tree.nwk
-│   │   └── ska2_tree.nwk
-│   ├── plots/
-│   │   ├── membership_ratios.png
-│   │   ├── distance_distributions.png
-│   │   └── combined_panels.png
-│   └── supplementary/
-│       └── exported_figures_for_publication/
+
 ```
 
 ## Input Requirements
