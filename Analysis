@@ -1,1 +1,70 @@
+##############################################
+# 01_build_trees.R
+# Build a rooted Neighbor-Joining tree
+# from a distance matrix (PopPUNK, Mash, SKA2, DNAdiff)
+##############################################
+
+# Load required package
+library(ape)
+
+##############################################
+# USER INPUTS
+##############################################
+
+# Path to the symmetric distance matrix (CSV, row names = sample names)
+distance_matrix_path <- "data/distances/poppunk_distances.csv"
+
+# Name of the sample to use as the outgroup
+outgroup_name <- "RW-TB008-LR-Asm"
+
+# Output path for the Newick tree
+output_tree_path <- "results/trees/poppunk_tree.nwk"
+
+##############################################
+# READ AND PROCESS DISTANCE MATRIX
+##############################################
+
+# Read distance matrix
+distance_matrix <- read.csv(distance_matrix_path, row.names = 1, check.names = FALSE)
+
+# Convert to distance object
+dist_object <- as.dist(distance_matrix)
+
+##############################################
+# BUILD NJ TREE
+##############################################
+
+tree <- nj(dist_object)
+
+##############################################
+# ROOT TREE USING OUTGROUP
+##############################################
+
+# Find outgroup index
+outgroup_index <- which(tree$tip.label == outgroup_name)
+
+if (length(outgroup_index) == 1) {
+  
+  tree_rooted <- root(tree, outgroup = outgroup_index)
+  message("✔ Tree successfully rooted at: ", outgroup_name)
+  
+} else {
+  
+  tree_rooted <- tree
+  warning("⚠ Outgroup not found. Tree will remain unrooted.")
+}
+
+##############################################
+# SAVE TREE IN NEWICK FORMAT
+##############################################
+
+write.tree(tree_rooted, file = output_tree_path)
+message("✔ Newick tree saved to: ", output_tree_path)
+
+##############################################
+# PLOT TREE
+##############################################
+
+plot(tree_rooted, show.tip.label = FALSE, no.margin = TRUE)
+title(main = "Rooted NJ Tree")
 
