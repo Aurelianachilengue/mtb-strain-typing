@@ -14,6 +14,7 @@ This project provides scripts to:
 The repository is designed to be lightweight and focused solely on analysis scripts.  
 Distance matrices must be generated externally using PopPUNK, Mash, SKA2, or DNAdiff, as described in their original publications.
 
+```
 ##Repository Structure
 
 mtb-strain-typing/
@@ -43,7 +44,7 @@ mtb-strain-typing/
 │   │   └── combined_panels.png
 │   └── supplementary/
 │       └── exported_figures_for_publication/
-
+```
 
 ## Input Requirements
 
