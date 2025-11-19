@@ -44,6 +44,7 @@ mtb-strain-typing/
 │   └── supplementary/
 │       └── exported_figures_for_publication/
 
+
 ## Input Requirements
 
 Distance matrices must be generated externally using the original tools:
