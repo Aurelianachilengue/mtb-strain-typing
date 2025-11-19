@@ -15,6 +15,7 @@ The repository is designed to be lightweight and focused solely on analysis scri
 Distance matrices must be generated externally using PopPUNK, Mash, SKA2, or DNAdiff, as described in their original publications.
 
 ##Repository Structure
+
 mtb-strain-typing/
 ├── README.md
 ├── analysis/
