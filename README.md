@@ -3,8 +3,6 @@
 Tools and workflows for reference-free genomic analysis of *Mycobacterium tuberculosis* strain typing.  
 This repository contains R scripts and helper workflows for evaluating reference-free genetic distance methods (PopPUNK, Mash, SKA2, DNAdiff) and generating visualisations and phylogenetic trees for downstream strain-typing analysis.
 
----
-
 ## Overview
 
 This project provides scripts to:
@@ -16,7 +14,34 @@ This project provides scripts to:
 The repository is designed to be lightweight and focused solely on analysis scripts.  
 Distance matrices must be generated externally using PopPUNK, Mash, SKA2, or DNAdiff, as described in their original publications.
 
----
+##Repository Structure
+mtb-strain-typing/
+├── README.md
+├── analysis/
+│   ├── 01_build_trees.R
+│   ├── 02_membership_ratio_plots.R
+│   ├── 03_distance_distributions.R
+│   └── helper_functions.R
+├── data/
+│   ├── distances/
+│   │   ├── dnadiff_distances.tsv
+│   │   ├── poppunk_distances.tsv
+│   │   ├── mash_distances.tsv
+│   │   └── ska2_distances.tsv
+│   └── lineage_assignment/
+│       └── tbprofiler_lineages.tsv
+├── results/
+│   ├── trees/
+│   │   ├── dnadiff_tree.nwk
+│   │   ├── poppunk_tree.nwk
+│   │   ├── mash_tree.nwk
+│   │   └── ska2_tree.nwk
+│   ├── plots/
+│   │   ├── membership_ratios.png
+│   │   ├── distance_distributions.png
+│   │   └── combined_panels.png
+│   └── supplementary/
+│       └── exported_figures_for_publication/
 
 ## Input Requirements
 
@@ -32,7 +57,6 @@ DNAdiff / dnadiff (from MUMmer)
 
 This repository does not run these tools; it only processes their outputs.
 
----
 ## Recommended Use
 
 Clone the repository and run the R scripts within analysis/ to reproduce:
