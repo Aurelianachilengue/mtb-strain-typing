@@ -61,3 +61,6 @@ membership ratio plots
 genetic distance distribution figures
 
 supplementary visualisations for publications
+
+## License
+This project is released under the MIT License (see `LICENSE`).
