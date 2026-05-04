@@ -48,7 +48,9 @@ SKA2
 
 DNAdiff / dnadiff (from MUMmer)
 
-This repository does not run these tools; it only processes their outputs.
+MTBseq
+
+
 
 ## Recommended Use
 
