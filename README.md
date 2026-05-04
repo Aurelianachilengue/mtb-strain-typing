@@ -20,19 +20,25 @@ Distance matrices must be generated externally using PopPUNK, Mash, SKA2, or DNA
 ```
 mtb-strain-typing/
 ├── README.md
-├── analysis/
+├── LICENSE
+│
+├── Analysis/
 │   ├── 01_build_trees.R
 │   ├── 02_membership_ratio_plots.R
 │   ├── 03_distance_distributions.R
-│   └── helper_functions.R
-├── data/
-│   ├── distances/
-│   │   ├── dnadiff_distances.tsv
-│   │   ├── poppunk_distances.tsv
-│   │   ├── mash_distances.tsv
-│   │   └── ska2_distances.tsv
-│   └── lineage_assignment/
-│       └── tbprofiler_lineages.tsv
+│   └── ClusteringMembership_TreePatternConvergent_groupsGiven_python3.py
+│
+├── Scripts/
+│   ├── README.md
+│   ├── 01_poppunk.sh
+│   ├── 02_MASH.sh
+│   └── 03_SKA2.sh
+│
+└── example_outputs/
+    ├── README.md
+    ├── poppunk_distances.txt
+    └── SKA2_distance.txt
+``
 
 ```
 
